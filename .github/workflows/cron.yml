@@ -5,6 +5,7 @@ on:
   schedule:
     - cron: '16 16 * * *'
     - cron: '0 0 1 * *' 
+  workflow_dispatch:
     
 jobs:
   test_schedule:
