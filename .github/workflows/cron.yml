@@ -11,9 +11,13 @@ jobs:
   test_schedule:
     runs-on: ubuntu-latest
     steps:
-      - name: Not on Monday or Wednesday
+      - name: Não na segunda ou quarta  #Not on Monday or Wednesday
         if: github.event.schedule != '30 5 * * 1,3'
         run: echo "This step will be skipped on Monday and Wednesday"
+      - name: Não se for manual
+        if: github.event.workflow_dispatch == True
+        run: echo "Esse evento vai ser pulado na execução manual"
       - name: Every time
         run: echo "This step will always run"
+        
         
