@@ -3,7 +3,7 @@ name: Workflow com horário
 
 on:
   schedule:
-    - cron: '10 19 * * *'
+    - cron: '16 16 * * *'
     - cron: '0 0 1 * *' 
     
 jobs:
